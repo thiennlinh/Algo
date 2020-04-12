@@ -1,1 +1,4 @@
 # Algo
+/*
+  Code giai thuat
+*/
