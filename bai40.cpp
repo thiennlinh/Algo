@@ -24,6 +24,7 @@ void dichuyen(int i) {
 		if(!visited[j]) { // neu chua den vi tri do thi con chay
 			x[i] = j;
 			visited[j] = true;
+			// Su dung quay lui o doan nay
 			tmp += c[x[i-1]][x[i]];
 			if(i==n) { // neu no den vi tri cuoi
 				if(tmp+c[x[n]][1] < FOPT) // neu chi phi tong van nho hon thi chon
