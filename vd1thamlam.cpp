@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int t, n, s[20], f[20];
+int t, n, s[1004], f[1004];
 
 void nhap() {
 	cin >> n;
@@ -50,7 +50,7 @@ void xuli() {
             end = f[i];
         }    
     }
-    cout << opt;
+    cout << opt << "\n";
 }
 
 int main() {

@@ -1,9 +1,8 @@
 #include <bits/stdc++.h>
 #include <string>
 
-using namespace std; 
-  
-// Returns vector of Pre Processed perfect cubes 
+using namespace std;
+
 vector<string> preProcess(long long int n) 
 { 
     vector<string> preProcessedCubes; 

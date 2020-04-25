@@ -15,10 +15,9 @@ int main() {
 			if(i*7 + j*4 == n) {
 				fi = j;
 				se = i;
-				break;
 			}
 		}
-		if(fi==0 || se==0) {
+		if(fi==0 && se==0) {
 			cout << "-1" << "\n";
 			continue;
 		} else {

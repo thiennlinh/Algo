@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-#define M 1000000007
 #define ll long long
 
 using namespace std;
@@ -14,7 +13,7 @@ int main() {
 		ll OPT = 0;
 		priority_queue<int, vector<int>, greater<int> > pg; // cau truc du lieu hang doi uu tien
 		for(ll i=0; i<n; i++) {
-			int a;
+			ll a;
 			cin >> a;
 			pg.push(a); // day vao hang doi
 		}
@@ -22,8 +21,8 @@ int main() {
 		while(pg.size() > 1) {
 			ll first = pg.top(); pg.pop();
 			ll second = pg.top(); pg.pop();
-			ll sum = (first + second) % M;
-			OPT = (OPT+sum) % M;
+			ll sum = first + second;
+			OPT = OPT+sum;
 			pg.push(sum);
 		}
 		cout << OPT << "\n";
