@@ -1,5 +1,5 @@
 #include <bits/stdc++.h> 
-#define MAX_CHAR 10007
+#define MAX_CHAR 27
 using namespace std;
 
 int t, d;

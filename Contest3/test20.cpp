@@ -18,7 +18,6 @@ void xuli() {
 		} else {
 			cnt += -1;
 		}
-        cout << id << endl;
         if (cnt < 0) {
             res += pos[id] - i;
             swap(s[pos[id]], s[i]);
