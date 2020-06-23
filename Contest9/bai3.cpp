@@ -1,42 +1,38 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 
 using namespace std;
 int a[1005][1005];
 vector<int> List[100001];
 int main()
 {
-    int n;
-	cin>>n;
-	for(int i=1;i<=n;i++)
+	int n;
+	cin >> n;
+	// Nhap mang 1 chieu ma tran ke
+	for (int i = 0; i < n; i++)
 	{
-		for(int j=1;j<=n;j++)
+		for (int j = 0; j < n; j++)
 		{
-			cin>>a[i][j];
-			if(a[i][j]==1)
-			{
-				List[i].push_back(j);
-			}
+			cin >> a[i][j];
 		}
 	}
-	
-	for(int i=n;i>=1;i--)
+
+	// Doc mang neu co a[i][j] = 1 thi push vao cuoi vector
+	for (int i = 0; i < n; i++)
 	{
-		for(int j=List[i].size()-1;j>=0;j--)
+		for (int j = 0; j < n; j++)
 		{
-			if(i<List[i][j])
-			{
-				cout<<i<<" "<<List[i][j]<<endl;
-			}
+			if (a[i][j])
+				List[i + 1].push_back(j + 1);
 		}
 	}
-/*	for(int i=n;i>=1;i--)
+
+	// Doc mang vector ket qua
+	for (int i = 1; i <= n; i++)
 	{
-		for(int j=n;j>=1;j--)
+		for (int j = 0; j < List[i].size(); j++)
 		{
-			if(a[i][j]==1&&i<j)
-			{
-				cout<<i<<" "<<j<<endl;
-			}
+			cout << List[i][j] << ' ';
 		}
-	}*/
+		cout << "\n";
+	}
 }
