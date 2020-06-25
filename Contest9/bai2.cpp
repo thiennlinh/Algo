@@ -2,34 +2,30 @@
 using namespace std;
 
 int a[1001][1001];
-int n;
+int n, u, v;
 int main()
 {
     cin >> n;
-    cin.ignore();
+    for (int i = 1; i <= n; i++)
+        for (int j = 1; j <= n; j++)
+        {
+            a[i][j] = 0;
+        }
     for (int i = 1; i <= n; i++)
     {
-        string str;
-        getline(cin, str);
-        str += ' ';
-        int val = 0;
-        for (int j = 0; j < str.length(); j++)
-        {
-            if (str[j] == ' ')
-            {
-                a[i][val] = 1;
-                val = 0;
-            }
-            else
-                val = val * 10 + (str[j] - '0');
-        }
+        cin >> u >> v;
+        a[u][v] = 1;
     }
     for (int i = 1; i <= n; i++)
     {
+
         for (int j = 1; j <= n; j++)
         {
-            cout << i << ' ' << j;
+            if (a[i][j] == 1)
+            {
+
+                cout << i << " " << j << endl;
+            }
         }
-        cout << '\n';
     }
 }
